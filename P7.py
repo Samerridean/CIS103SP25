@@ -25,3 +25,4 @@ def main():
     CalK=PtK(P)
     print('Kilograms:',CalK)
 main()
+#Can be condensed into four functions
