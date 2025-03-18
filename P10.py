@@ -20,7 +20,7 @@ language to support both front-end and back-end functionality.
     RS=thetext.strip()
     print(RS)
     OL=len(thetext)
-    f=thetext.find('the')
+    f=thetext.count('the')
     print('\n','Original Text Length:',OL)
     if thetext.find('little'):
         print('\n','Little present?','\n','Yes Little was Found')
