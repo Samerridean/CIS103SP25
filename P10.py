@@ -20,16 +20,16 @@ language to support both front-end and back-end functionality.
     RS=thetext.strip()
     print(RS)
     OL=len(thetext)
-    f=thetext.count('the')
+    f=RS.count('the')
     print('\n','Original Text Length:',OL)
-    if thetext.find('little'):
+    if RS.find('little'):
         print('\n','Little present?','\n','Yes Little was Found')
     else:
         print('\n','Little present?','\n','No Little was found')
     L=len(RS)
     print('\n','New Text Length:',L)
     print('\n','"The" Count:',f)
-    if thetext.find('titan'):
+    if RS.find('titan'):
         print('\n','Any Titans About?','\n','Titan was found. RUN!')
     else:
         print('\n','Titan was not found. You are safe.')
