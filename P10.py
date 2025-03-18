@@ -20,7 +20,7 @@ language to support both front-end and back-end functionality.
     RS=thetext.strip()
     print(RS)
     OL=len(thetext)
-    f=RS.count('the')
+    f=RS.count("the")
     print('\n','Original Text Length:',OL)
     if RS.find('little'):
         print('\n','Little present?','\n','Yes Little was Found')
@@ -33,6 +33,9 @@ language to support both front-end and back-end functionality.
         print('\n','Any Titans About?','\n','Titan was found. RUN!')
     else:
         print('\n','Titan was not found. You are safe.')
-    
+    FA=RS.find('appl')
+    print('\n Appl starts at character',FA)
+    thetext2=RS.replace('Python','PYTHON')
+    print('\n',thetext2)
 # ---------------------------------
 main()
