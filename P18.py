@@ -18,8 +18,11 @@ def CALbttn(mainwin):
     CALbtn=Button(mainwin,font=('Courier New',20),text='CAL',fg='black',
                   bg='gold',command=lambda:CAL(mainwin,kalvin))
     CALbtn.place(x=160,y=600)
-def CAL(mainwin,kalvin):
-    KtF=kalvin-273.15
+def CAL(mainwin,Ktxtbox):
+    num=float()
+    KtF=num-273.15
+    words=str(KtF)
+    words.insert(0,Fahbox.get())
     return
 def errbox(mainwin):
     error=Entry(mainwin,width=10,bg='white',fg='black',font=('Courier New',32))
@@ -38,4 +41,3 @@ def main():
     CALbttn(mainwin)
     mainwin.mainloop()
 main()
-
