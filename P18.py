@@ -23,17 +23,19 @@ def calculate(Ktxtbox, Celbox, Fahbox, errbox):
     try:
         input_text = Ktxtbox.get()
         if not input_text:
-            raise ValueError("Empty Input")
+            raise ValueError("Cannot Be Blank")
         num = float(input_text)
+        if num <= 0:
+           raise ValueError("Kelvin Cannot Be Negative Or Zero")
         Celbox.delete(0, END)
-        Fahbox.delete(0, END)   
+        Fahbox.delete(0, END)
         cel_value = num - 273.15
-        fah_value = (cel_value * 9/5) + 32      
+        fah_value = (cel_value * 9/5) + 32
         Celbox.insert(0, f"{cel_value:.2f}")
         Fahbox.insert(0, f"{fah_value:.2f}")
-    except ValueError:
+    except ValueError as e:
         errbox.delete(0, END)
-        errbox.insert(0, "Invalid Input")
+        errbox.insert(0, str(e))
 def clear_boxes(Ktxtbox, Celbox, Fahbox, errbox):
     Ktxtbox.delete(0, END)
     Celbox.delete(0, END)
